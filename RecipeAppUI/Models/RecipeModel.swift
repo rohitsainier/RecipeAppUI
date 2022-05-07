@@ -8,7 +8,8 @@
 import Foundation
 
 
-enum CategoryType : String {
+enum CategoryType : String, CaseIterable, Identifiable {
+    var id: String {self.rawValue}
     case breakfast = "Breakfast"
     case soup = "Soup"
     case salad = "Salad"
